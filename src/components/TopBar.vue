@@ -3,36 +3,36 @@
     <div class="logo">乐享御味</div>
     <div class="menu">
       <ul>
-        <li :class="viewName=='home'? 'selected':''">
-          <router-link to="/">
+        <router-link to="/">
+        <li :class="viewName=='index'? 'selected':''">
             <div>首页</div>
             <div class="sub">HOME</div>
-          </router-link>
         </li>
+        </router-link>
+        <router-link to="/products">
         <li :class="viewName=='products'? 'selected':''">
-          <router-link to="/products">
             <div>乐享新品</div>
             <div class="sub">NEW PRODUCTS</div>
-          </router-link>
         </li>
+        </router-link>
+        <router-link to="/news">
         <li :class="viewName=='news'? 'selected':''">
-          <router-link to="/news">
             <div>新闻资讯</div>
             <div class="sub">NEWS</div>
-          </router-link>
         </li>
+        </router-link>
+        <router-link to="/sales">
         <li :class="viewName=='sales'? 'selected':''">
-          <router-link to="/sales">
             <div>销售合作</div>
             <div class="sub">SALES&COOPERATION</div>
-          </router-link>
         </li>
+        </router-link>
+        <router-link to="/about">
         <li :class="viewName=='about'? 'selected':''">
-          <router-link to="/about">
             <div>关于我们</div>
             <div class="sub">ABOUT</div>
-          </router-link>
         </li>
+        </router-link>
       </ul>
     </div>
   </div>

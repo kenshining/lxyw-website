@@ -1,6 +1,5 @@
 <template>
   <div>
-  	<topbar v-bind:viewName="menuSelect"></topbar>
   	<div class="web_swiper">
   		<swiper :options="swiperOption"  ref="index_swiper">  
             <!-- 这部分放你要渲染的那些内容 -->  
@@ -15,17 +14,13 @@
 </template>
 <script type="text/javascript">
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import topbar from '@/components/TopBar'
-
 export default {
   components: {
     swiper,
-    swiperSlide,
-    topbar
+    swiperSlide
   },
   data(){
   	return {
-  		menuSelect:'home',
   		swiperOption:{
   			//是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true  
             notNextTick: true,

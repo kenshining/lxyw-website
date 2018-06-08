@@ -2,12 +2,18 @@ body{
 	margin: 0;
 	padding: 0;
 	font-size: 12px;
-	background-color: rgba(0,0,0,0);
 	font-family:'Raleway', sans-serif;
 }
 *{
 	margin: 0;
 	padding: 0;
+}
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:left;
+    visibility:hidden;
 }
 .web_swiper img{
 	width:100%;
@@ -17,6 +23,19 @@ body{
 	background: white;
 	width:16px;
 	height:16px;
+}
+
+label.line-blue{
+	display: block;
+    background-color: #07cbc9;
+    height: 2px;
+    margin: 0 auto;
+}
+label.line-black{
+	display: block;
+    background-color: #000;
+    height: 2px;
+    margin: 0 auto;
 }
 .topbar{
 	height: 70px;
@@ -61,6 +80,90 @@ body{
 
 		ul li:hover{
 			background-color:rgba(0, 0, 0, 0.25);
+		}
+		ul li:active{
+			background-color:#000;
+		}
+	}
+}
+
+.about{
+	width:100%;
+	.bg{
+	    background-color: #000;
+	    width: 100%;
+	    height:auto;
+	    padding:30px 0;
+  	}
+  	.bg-odd{
+	    background-color: #07cbc9;
+	    width: 100%;
+	    height:auto;
+	    padding:30px 0;
+  	}
+	.line{
+		width:90%;
+		margin: 0  auto;
+		.title{
+			color: #fff;
+		    text-align: left;
+		    font-size: 32px;
+		}
+		.members{
+			width:100%;
+			display:flex;
+			display: -webkit-flex; /* Safari */
+			flex-direction: row;
+			justify-content: flex-start;
+			flex-wrap:wrap;
+			.member{
+				width:300px;
+				margin-top:30px;
+				height:auto;
+				padding:10px;
+				margin-right:30px;
+				background-color:#fff;
+				img{
+					width:300px;
+				}
+				.discription{
+					width:100%;
+					.t{
+						display:block;
+						text-align:center;
+						font-size:20px;
+						font-weight:bold;
+						padding-top:10px;
+						padding-bottom:5px;
+					}
+					.n{
+						display:block;
+						padding-top:10px;
+					}
+					label.fline{
+						display: block;
+					    background-color: #07cbc9;
+					    width: 35px;
+					    height: 2px;
+					    margin: 0 auto;
+					}
+				}
+
+			}
+		}
+
+		.contact{
+			width:100%;
+			display:flex;
+			display: -webkit-flex; /* Safari */
+			flex-direction: row;
+			justify-content: flex-start;
+			.m{
+				margin-top:30px;
+				height:450px;
+				width:800px;
+			}
+
 		}
 	}
 }

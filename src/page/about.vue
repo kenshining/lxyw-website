@@ -25,7 +25,8 @@
           <div class="contact">
             <div class="m">
               <!-- <qqMap :height="height" :longitude="longitude" :latitude="latitude"></qqMap> -->
-              <baiduMap :height="height" :longitude="longitude" :latitude="latitude"></baiduMap>
+              <!-- <baiduMap :height="height" :longitude="longitude" :latitude="latitude"></baiduMap> -->
+              <gaodeMap :height="height" :longitude="longitude" :latitude="latitude" v-roles="{code:'P108'}"></gaodeMap>
             </div>
             <div>
 
@@ -40,10 +41,12 @@
 <script type="text/javascript">
   import baiduMap from '@/components/BaiDuMap.vue';
   import qqMap from '@/components/QQMap.vue';
+  import gaodeMap from '@/components/GaoDeMap.vue';
   export default {
   components: {
     qqMap,
-    baiduMap
+    baiduMap,
+    gaodeMap
   },
   data(){
     return {

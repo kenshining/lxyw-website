@@ -17,7 +17,7 @@ export default {
   data(){
     return {
         transitionName:'fade',
-        menuSelect:'index'
+        menuSelect:''
     }
   },
   watch: {
@@ -25,10 +25,7 @@ export default {
 	      console.log(to);
 	      this.menuSelect = to.name;
 	    }
-	},
-  mounted () {
-
-  }
+	}
 }
 </script>
 

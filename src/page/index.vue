@@ -1,14 +1,14 @@
 <template>
   <div>
   	<div class="web_swiper">
-  		<swiper :options="swiperOption"  ref="index_swiper">
-            <!-- 这部分放你要渲染的那些内容 -->
+  		<swiper :options="swiperOption"  ref="index_swiper">  
+            <!-- 这部分放你要渲染的那些内容 -->  
             <swiper-slide v-for="item in items">
             	<img :src="item.img">
-            </swiper-slide>
-            <!-- 这是轮播的小圆点 -->
+            </swiper-slide>  
+            <!-- 这是轮播的小圆点 -->  
             <div class="swiper-pagination" slot="pagination"></div>
-        </swiper>
+        </swiper>  
   	</div>
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
   data(){
   	return {
   		swiperOption:{
-  			//是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
+  			//是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true  
             notNextTick: true,
             loop:true,
             initialSlide:0,
@@ -33,7 +33,7 @@ export default {
             speed:1000,
             effect:'fade',
             direction : 'horizontal',
-            spaceBetween: 0,
+            spaceBetween: 0,  
             //滑动之后回调函数
           on: {
               slideChangeTransitionEnd: function(){
@@ -45,7 +45,7 @@ export default {
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
           },
-          //分页器设置
+          //分页器设置         
           pagination: {
               el: '.swiper-pagination',
               clickable :true
@@ -59,13 +59,14 @@ export default {
   	}
   },
   computed:{
- 	swiper() {
-    	return this.$refs.index_swiper.swiper;
+ 	swiper() {  
+    	return this.$refs.index_swiper.swiper;  
     }
   },
-  mounted () {
-    //这边就可以使用swiper这个对象去使用swiper官网中的那些方法
+  mounted () {  
+    //这边就可以使用swiper这个对象去使用swiper官网中的那些方法  
     this.swiper.slideTo(0, 0, false);
+    layer.msg("1111");
   }
 }
 </script>
